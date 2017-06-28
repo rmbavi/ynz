@@ -1,0 +1,81 @@
+#index-main{
+  margin-top: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 84px;
+  left: 0;
+}
+.leftMenu{
+  height:100%;
+  width:256px;
+}
+.edit_box{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #FFFFFF;
+  width:30px;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 18px
+}
+#menuleft #menu_box{
+  padding-left: 8%;
+  margin-top: 5%;
+}
+#menuleft #menu_box ul li{
+  height: 13%;
+  font-size: 14px;
+}
+#menu_box ul li i{
+  font-size: 20px;
+  margin-right: 20px
+}
+.selected{
+  color: #f8b31f;
+}
+#menuleft #menu_user_into{
+  background: url("../image/menu_bg.png") no-repeat;
+  background-size:100% 100%;
+  height: 170px;
+
+}
+#edit_info{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.head_img img{
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  border: 3px solid #ffffff;
+}
+.head_img{
+  float: left;
+}
+.edit_box{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #FFFFFF;
+  width:30px;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 18px
+}
+#menu_box{
+  padding-left: 30px;
+  margin-top: 90px;
+}
+#menu_box ul li{
+  line-height: 40px;
+  height: 80px;
+  font-size: 18px;
+}
+

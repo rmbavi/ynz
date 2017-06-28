@@ -1,0 +1,87 @@
+
+.msgBody{
+  background-color: #ececec;
+  text-align:justify;
+  text-justify:inter-ideograph;
+  position: absolute;
+  top:40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.head_time{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.head_time span{
+  background-color: #d7d7d7;
+  color: white;
+  padding: 5px;
+  line-height: 10px;
+  width: 150px;
+}
+.box{
+  height: auto;
+  padding: 5px;
+}
+.img_ke_fu{
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+
+.content{
+  margin-right: 15px;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 85px;
+}
+.qipao_1 {
+  position: relative;
+  margin-left: 70px;
+  background: #fff;
+  padding: 10px 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .117647), 0 1px 4px rgba(0, 0, 0, .117647);
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.jianjiao_1 {
+  position: absolute;
+  top: 0;
+  left: -20px; /* 圆角的位置需要细心调试哦 */
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border-left: 13px solid transparent;
+  border-right: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  margin-top: 15px;
+
+}
+.demo2 {
+  position: relative;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.demo2 em, .demo2 span {
+  font-style: normal;
+  font-size: 30px;
+  position: absolute;
+  left: -16px;
+  top: 40px;
+  color: red;
+}
+
+.demo2 span {
+  left: -10px;
+  color: white;
+  margin-top: -35px;
+}

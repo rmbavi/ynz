@@ -1,0 +1,140 @@
+#area-box{
+  z-index: 200;
+  position: absolute;
+  top:10px;
+  left: 10px;
+  border-radius: 14px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.117647),0 1px 4px rgba(0,0,0,.117647)
+}
+#area-box li:first-child a{
+  border-radius:14px 14px 0px 0px;
+}
+#area-box li:last-child a{
+  border-radius:0px 0px 14px 14px;
+  border-bottom:0;
+}
+li a{
+  font-size: 12px;
+  display: block;
+  padding: 12px 8px;
+  background-color: #fff;
+  color: #666;
+  border-bottom: 1px solid #d5d6d8;
+}
+.select_area{
+  background-color: #f8b31f;
+  color: #fff;
+}
+
+#map_box{
+  height: 100%;
+}
+.pb{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #FFF;
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+  }
+.my-icon-button{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-color:#f8b31f;
+  color: #fff;
+  line-height:50px;
+  text-align:center;
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.mint-main-button{
+  color: #000;
+  background-color:#f8b31f;
+}
+#dingwei_box{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 200;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  border-radius: 4px;
+  border:1px solid #d5d6d8;
+  color: #666;
+}
+#dingwei_box2{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 200;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  border-radius: 5px;
+  border:1px solid #d5d6d8;
+  color: #b8b8b8;
+}
+#dingwei_box2 span div{
+  margin:5px 2px 0px 4px;
+}
+.qipao {
+  position: relative;
+  width: 120px;
+  height: 35px;
+  background: #fff;
+  padding: 5px 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .117647), 0 1px 4px rgba(0, 0, 0, .117647);
+}
+.jianjiao {
+  position: absolute;
+  top: 0;
+  left: -20px; /* 圆角的位置需要细心调试哦 */
+  width: 0;
+  height: 0;
+  font-size: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+}
+.head_ico {
+  background: url("../image/user_head.png");
+  height: 48px;
+  width: 40px;
+  background-size: 40px 48px;
+  line-height: 42px;
+  text-align: center;
+  /*border: 1px solid #000000;*/
+}
+.head_img{
+  margin-top: 4px;
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+}
+.amap-marker-label {
+  border: 0;
+  padding: 0;
+}
+
+#all_release{
+  position: absolute;
+  top:20px;
+  right:20px;
+  z-index:200;
+  height: 35px;
+  width:35px;
+  background-color: #ffffff;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  border:1px solid #d5d6d8;
+}

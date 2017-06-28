@@ -1,0 +1,39 @@
+.manage_label_address .mint-cell-wrapper{
+  font-size: 14px;
+}
+.manage_label_address .mint-cell-value textarea{
+  font-size: 12px;
+}
+.manage_label_address{
+  padding: 0px 10px 0px 0px;
+
+}
+.manageSwitch {
+  margin: 10px 10px;
+  float: right;
+}
+.manageSetting p {
+  font-size: 14px;
+  float: left;
+  margin-left: 10px;
+}
+
+.manageSetting {
+  height: 50px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.mangerAddress .mint-cell-wrapper {
+  font-size: 14px;
+  border: 1px solid;
+
+}
+
+.mint-popup-4 {
+  width: 100%;
+}
+
+.mint-popup-4 {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

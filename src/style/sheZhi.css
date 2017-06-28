@@ -1,0 +1,23 @@
+.shezhi{
+  background: #ececec;
+
+}
+.safe{
+  background: white;
+  width: 100%;
+}
+.safe_left{
+  float: left;
+  width: 50%;
+}
+.safe_right{
+  float: right;
+  width: 50%;
+
+}
+.shezhi .mint-cell-text{
+  font-size: 14px;
+}
+.shezhi .mint-cell-value{
+  font-size: 14px;
+}

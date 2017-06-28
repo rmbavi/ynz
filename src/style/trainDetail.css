@@ -1,0 +1,78 @@
+.train_cp_content {
+  padding:5px 0px 5px 10px;
+  font-size: 12px;
+  line-height: 28px;
+  color: #5d5d5d;
+  margin-left: 150px
+}
+
+.train_cp_content_title {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.train_cp_content_number {
+  color: #ec6464;
+  font-size: 12px
+}
+
+.train_progress {
+  font-size: 12px;
+  padding: 10px ;
+  line-height: 28px;
+}
+.train_content{
+  height: 190px;
+}
+
+.train_progress .mt-progress-runway {
+  border-radius: 50px;
+}
+
+.train_progress .mt-progress-progress {
+  border-radius: 50px;
+  background-color: #45c01a;
+}
+
+.train_but {
+  margin-top: -10px;
+  height: 38px;
+  padding: 10px;
+}
+.shou_but_yanse{
+  width:100%;background-color: #ec6464;color: #FFFFFF
+}
+.dai_but_yanse{
+  width:100%;margin-top:15px;
+  background-color: #648aec;
+  color: #FFFFFF;
+}
+.train_but label {
+  font-size: 14px;
+}
+
+.train_but button {
+  /*height: 30px;*/
+}
+
+.train_detail {
+  padding: 10px;
+  font-size: 14px;
+  color: #f8b31f;
+  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
+}
+
+.train_detail_content {
+  padding: 10px ;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.ripe_but {
+  background-color: #ec6464;
+  color: #FFFFFF;
+  width: 45%;
+}

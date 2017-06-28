@@ -1,0 +1,302 @@
+
+.suggest-header{
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 44px;
+  white-space: nowrap;
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,.12);
+}
+.city-wrapper{
+  padding: 13px 0;
+}
+.city-content{
+  height: 18px;
+}
+.border-right-1px{
+  position: relative;
+}
+.city-select{
+  line-height: 18px;
+  padding: 0 16px;
+  font-size: 0;
+}
+.text{
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+  font-size: 12px;
+}
+.pulldown{
+  display: inline-block;
+  vertical-align: top;
+  color: #999;
+  font-size: 12px;
+}
+.city-input-wrapper{
+  width: 143px;
+  height: 18px;
+  padding: 0 10px;
+}
+.address-wrapper{
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+}
+.address-input{
+  display: table-cell;
+  width: 100%;
+  height: 14px;
+  margin-top: -10px;
+  padding: 15px 0;
+  vertical-align: middle;
+  font-size: 12px;
+  border: 0px;
+  outline: 0;/*这个属性去掉input框选择之后的border*/
+}
+::-webkit-input-placeholder {
+  color: #999;
+}
+:-moz-placeholder {/* Firefox 18- */
+  color: #999;
+}
+.text2{
+  margin-top: 14px;
+  width:45px;
+  color: #999;
+  display: inline-block;
+  font-size: 12px;
+}
+.list-item{
+  padding: 0 16px;
+}
+.border-bottom-1px{
+  position: relative;
+}
+.item-wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0;
+}
+.icon{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  width: 22px;
+  color: #999;
+  font-size: 12px;
+}
+.address-list{
+  padding: 10px 10px 0 10px;
+  background-color: #f3f4f5;
+}
+.address-list .list-item{
+  background-color: #fff;
+  border-bottom:1px solid #f3f4f5;
+}
+.address-list .address-wrapper{
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 45px;
+  padding:5px 5px;
+
+}
+.address-list .address-info{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 20px;
+}
+.address-list .displayname{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  color: #333;
+}
+.address-list .displayname span{
+font-size: 12px;
+}
+.address-list .recomment{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: -3px;
+  margin-left: 6px;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+  -webkit-transform: scale(.8);
+  transform: scale(.8);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+  background-color: #3cbca3;
+}
+.address-list .address{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #999;
+}
+.info-card-wrapper{
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+}
+.info-card-wrapper .info-card{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 94%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 14px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  font-size: 0;
+}
+.info-card-wrapper .info-card .icon{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  width: 24px;
+}
+.info-card-wrapper .info-card .icon .icon-start{
+  /* display: inline-block; */
+  width: 16px;
+  height: 20px;
+  background-size: 16px 20px;
+  background-image: url("../image/address_def.png");
+}
+.info-card-wrapper .info-card .address-wrapper{
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 60px;
+}
+.info-card-wrapper .info-card .address-wrapper .address-info{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 20px;
+}
+.info-card-wrapper .info-card .address-wrapper .address-info .displayname{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  color: #333;
+}
+.info-card-wrapper .info-card .address-wrapper .address-info .marker.recommend{
+  background-color: #3cbca3;
+}
+.info-card-wrapper .info-card .address-wrapper .address-info .marker{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: -3px;
+  margin-left: 6px;
+  padding: 4px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+  -webkit-transform: scale(.8);
+  transform: scale(.8);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+.info-card-wrapper .info-card .address-wrapper .address{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #999;
+}
+.info-card-wrapper .info-card .tip{
+  text-align: right;
+  color: #666;
+}
+.info-card-wrapper .info-card .tip .text{
+  vertical-align: middle;
+  font-size: 12px;
+}
+.citys{
+  width:100%;
+  height:100%;
+  background-color:#f3f4f5;
+}
+.split{
+  width:100%;
+  height:10px;
+  background-color: #f3f4f5;
+}
+.city-list{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  overflow: auto;
+}
+.list-title{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #333;
+}
+.list-group-items{
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #333;
+  border-bottom:1px solid #f3f4f5;
+}
+.list-group-titles{
+  padding: 16px 16px 10px;
+  line-height: 1;
+  font-size: 14px;
+  color: #999;
+  background: #f7f7f7;
+}

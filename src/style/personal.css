@@ -1,0 +1,27 @@
+.personal{
+  height:100%;
+  width:100%;
+  text-align: center;
+  padding-top: 20px;
+  background: url("../image/menu_bg.png") no-repeat;
+  background-size: 100% auto;
+}
+.personal img{
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  margin-top: 38%;
+  border: 3px solid #ffffff;
+}
+.addressSty{
+  font-size: 12px;
+  color: #8d8d8d;
+}
+.remark{
+  font-family: "黑体";
+  font-size: 16px;
+}
+.userName{
+  font-family: "黑体";
+  font-size: 24px;
+}

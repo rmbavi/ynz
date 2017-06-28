@@ -1,0 +1,134 @@
+
+.title_box{
+  padding: 10px;
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+.title_box title{
+  font-size: 18px;
+  font-weight: bold;
+  color: #cccccc;
+}
+ .title_box .create_time{
+   font-size: 12px;
+   color: #999999 ;
+ }
+ .content_x{
+   font-size: 14px;
+   line-height: 20px;
+   text-align:justify;
+   text-justify:inter-ideograph;
+   width: 100%;
+   color: #333333;
+ }
+
+
+ .content_x img{
+   max-width: 100%;
+ }
+.img_x{
+  height: 270px;
+  margin-top: 10px;
+  text-align: center;
+}
+.discuss{
+  height: 28px;
+  /*width: 100%;*/
+  margin-top: 10px;
+  line-height:28px;
+}
+
+.pl_box {
+  margin-top: 20px
+}
+.pl_header_box{
+  float: left;width:40px;height: 40px;border-radius: 50%;
+}
+.pl_content_box{
+  padding-left: 50px
+}
+.pl_content_head {
+  font-size: 14px;
+  color: #999999;
+  margin-top: 10px;
+
+}
+.pl_content_time{
+  text-align: right;
+  float: right
+}
+
+.pl_content_text{
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333333;
+}
+
+.discussing_x{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  margin: 0;
+  border-top: 1px solid #eaeaea;
+  background-color: white;
+}
+.tainxie_box_x{
+  margin-right: 95px;
+  margin-left: 10px;
+
+}
+.tainxie_x{
+  height: 37px;
+  border: 1px solid #ececec;
+  color: #999999;
+  width: 95%;
+  margin-top: 4px;
+  padding-left: 5px;
+}
+.tijiao_box_x {
+  float: right;
+  height: 35px;
+  margin-top: -30px;
+  margin-right: 10px;
+}
+.tijiao_box_x .mint-button-text{
+  font-size: 14px;
+}
+.tijiao_x{
+  float: left;
+  background-color:#f8b31f ;
+  border:  1px solid;
+  width: 90px;
+  height: 44px;
+  margin-top: -13px;
+
+}
+.lodingMore_x{
+  text-align: center;
+  margin-top: 8px;
+}
+
+.lodingNow_x{
+  font-size: 12px;
+  /*color: #ccc;*/
+  position: relative;
+  top:-10px;
+  left:5px;
+}
+
+.lodingMore{
+  text-align: center;
+  padding-top: 8px;
+}
+.lodingMore span{
+  display: inline-block;
+  text-align: center;
+}
+.lodingNow{
+  font-size: 12px;
+  /*color: #ccc;*/
+  position: relative;
+  top:-10px;
+  left:5px;
+}

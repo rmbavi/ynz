@@ -1,0 +1,4 @@
+//记录经纬度地址
+export const RECORD_ADDRESS = 'RECORD_ADDRESS'
+//记录详细地址
+export const RECORD_DETAILED_ADDRESS = 'RECORD_DETAILED_ADDRESS'

@@ -1,0 +1,11 @@
+.fali_content{
+  padding-top: 40px;
+  margin: 10px;
+  font-size: 14px;
+  text-align:justify;
+  text-justify:inter-ideograph;
+}
+.fali_content span{
+  margin-left: 20px;
+  text-align: left;
+}
