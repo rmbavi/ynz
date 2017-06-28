@@ -106,7 +106,7 @@
   import {fanyi} from '../../service/unit.js'
   import {createPay,getStore,objIsNull,checkAccountMoney,pay,createAliPay} from '../../service/getData.js';
   import {zheyan} from '../../components/zheyan.vue'
- 
+  import {monitorReturn} from '../../service/monitor'
   export default{
         data: function () {
             return{
@@ -124,6 +124,8 @@
             }
         },
         mounted(){
+            monitorReturn(false,"ynz")
+
             let that=this
             let token=getStore("token")
             that.data=that.$route.params

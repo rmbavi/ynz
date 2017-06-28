@@ -9,7 +9,8 @@
         <mt-navbar v-model="selected" style="margin-top:50px">
             <mt-tab-item id="0" @click.native="toSelect('0')">培育中</mt-tab-item>
             <mt-tab-item id="1" @click.native="toSelect('1')">已成熟</mt-tab-item>
-            <mt-tab-item id="2" @click.native="toSelect('2')">已收获</mt-tab-item>
+            <mt-tab-item id="2" @click.native="toSelect('2')">收获中</mt-tab-item>
+            <mt-tab-item id="3" @click.native="toSelect('3')">已收获</mt-tab-item>
         </mt-navbar>
         <div v-show="!loadingon">
             <mt-tab-container v-model="selected">
@@ -27,7 +28,7 @@
                                 <span class="normal_text" style="margin-left:5px">{{matureTime(data0.create_time)}}天后成熟</span>
                             </div>
                             <div class="pro_sp">
-                            <myCanvas :index='index' message=50 linecolor=#37b304 value=50 zt=培育中></myCanvas>
+                            <myCanvas :index='index' :message='matureTime(data0.create_time)' linecolor=#37b304 :value='(data0.traim_time-matureTime(data0.create_time))' zt=培育中></myCanvas>
                             </div>
                         </div>
                         <div style="clear:both"></div>
@@ -67,10 +68,32 @@
                                 <span class="normal_text" style="margin-left:5px">购买数量</span>
                                 <span class="number_text">{{data2.number}}</span>
                                 <span class="normal_text">({{Myfanyi(data2.unit)}})</span> <br>
+                                <span class="normal_text" style="margin-left:5px;color:#ec6464">收获中</span>
+                            </div>
+                            <div class="pro_sp">
+                            <myCanvas :index='index+length[0]+length[1]' message=0 linecolor=#ec6464 value=100 zt=收获中></myCanvas>
+                            </div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div v-show="datas[2]==undefined" class="notData"><span>没有数据</span></div>
+                </mt-tab-container-item>
+
+                <mt-tab-container-item id="3">
+                    <div v-show="datas[3]!=undefined" v-for="(data3,index) in datas[3]" style="position:relative;border-bottom:1px solid #e6e1e1" @click="toHarvest(data2.ids,data2.commodity_ids)">
+                        <div class="content_pay">
+                            <div class="img_sp">
+                                <img :src="returnImgs(data3.imgs)" alt="">
+                            </div>
+                            <div class="content_text">
+                                <p class="name_sp">{{data3.names}}</p>
+                                <span class="normal_text" style="margin-left:5px">购买数量</span>
+                                <span class="number_text">{{data3.number}}</span>
+                                <span class="normal_text">({{Myfanyi(data3.unit)}})</span> <br>
                                 <span class="normal_text" style="margin-left:5px;color:#ec6464">已收获</span>
                             </div>
                             <div class="pro_sp">
-                            <myCanvas :index='index+length[0]+length[1]' message=0 linecolor=#ec6464 value=100 zt=已收获></myCanvas>
+                            <myCanvas :index='index+length[0]+length[1]+length[2]' message=0 linecolor=#ec6464 value=100 zt=已收获></myCanvas>
                             </div>
                         </div>
                         <div style="clear:both"></div>
@@ -88,10 +111,10 @@
     </div>
 </template>
 <script>
-    import Toast from 'mint-ui'
+    import {Toast} from 'mint-ui'
     import myCanvas from '../../components/progress.vue'
     import { Navbar, TabItem } from 'mint-ui';
-    import {objIsNull ,setStore,getStore,getOrder,getOrderInfo} from '../../service/getData.js'
+    import {objIsNull,setStore,getStore,getOrder,getOrderInfo} from '../../service/getData.js'
     import {imgBaseUrl,default_news_detail} from '../../config/env.js'
     import {fanyi} from '../../service/unit.js'
     import  load from '../../components/load.vue'
@@ -104,11 +127,12 @@
                datas:[],
                status:0,
                token:"",
-               length:[],
+               length:[0,0,0,0,0,0],
                default_news_detail:default_news_detail,
                commodity_ids:"",
                loadingon:true,
-               orderStatus:[2,3,6], //0未支付 2已支付 3 已成熟 4收获中 5发货中 6完成收获
+               orderStatus:[2,3,4,6], //0未支付 2已支付 3 已成熟 4收获中 5发货中 6完成收获
+               csTime:"",//成熟时间
             }
         },
          mounted(){
@@ -139,11 +163,11 @@
                         console.log("res",res)
                         if(res.errcode=="0"){
                             if(res.data.length!=0){
-                            that.datas[number]=res.data
-                            that.length.push(res.data.length)
-                            // that.status+=1
-                            // that.getData(that.status)
-                            console.log("that.datas",that.datas)
+                                that.datas[number]=res.data
+                                that.length[number]=res.data.length
+                                // that.status+=1
+                                // that.getData(that.status)
+                                console.log("that.datas",that.datas)
                             }
                         }
                         that.loadingon=false

@@ -34,7 +34,7 @@
   import {imgBaseUrl,default_news_detail} from '../../config/env.js'
   import {getYNZ,getStore,objIsNull} from "../../service/getData.js"
   import  load from '../../components/load.vue'
-
+  import {monitorReturn} from '../../service/monitor'
   export default{
     data: function () {
       return {
@@ -44,6 +44,7 @@
       }
     },
     mounted(){
+      monitorReturn(true)
       let that = this
       let token = getStore("token")
       console.log("token", token)

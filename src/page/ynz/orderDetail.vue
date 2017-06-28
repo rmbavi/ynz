@@ -17,7 +17,7 @@
             <span class="normal_text" style="margin-left:5px">购买数量</span>
             <span class="number_text">{{buy_number}}</span>
             <span class="normal_text">({{unit}})</span><br>
-            <span class="normal_text" style="margin-left:5px">XX天后成熟</span>
+            <span class="normal_text" style="margin-left:5px">{{csTime}}天后成熟</span>
           </div>
           <div class="pro_sp">
             <myCanvas message=50 linecolor=#36b302 value=50 zt=成长中></myCanvas>
@@ -104,6 +104,8 @@
   import {imgBaseUrl,default_news_detail,} from '../../config/env.js'
   import {fanyi} from '../../service/unit.js'
   import {createPay,getStore,objIsNull,createOrder} from '../../service/getData.js'
+  import {monitorReturn} from '../../service/monitor'
+
   export default{
         data: function () {
             return{
@@ -122,10 +124,13 @@
                 default_news_detail:default_news_detail,
                 unit:"",
                 commodityIds:"",//商品ids
-                loadingon:false
+                loadingon:false,
+                csTime:"",//成熟时间
             }
         },
         mounted(){
+            monitorReturn(false,"ynz")
+
             let that=this
             that.loadingon=true
             that.data=that.$route.params
@@ -135,6 +140,7 @@
             that.pay_number=that.data.total 
             that.unit=that.data.unit
             that.commodityIds=that.data.commodityIds
+            that.csTime=that.data.csTime
             that.loadingon=false
         },
         props: [],

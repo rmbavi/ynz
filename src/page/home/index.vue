@@ -57,9 +57,9 @@
           <ul>
             <!--<li @click="toOrder" style="color: #c5c5c5;"><i class="icon iconfont icon-dingdan"></i>我的订单</li>
             <li @click="toMyWallet"><i class="icon iconfont icon-qianbao"></i>我的钱包</li>-->
-            <li @click="toKefu"><i class="icon iconfont icon-kefu" style="font-size: 16px"></i> 客服服务</li>
-            <li @click="shezhi"><i class="icon iconfont icon-shezhi" style="font-size: 17px"></i> 系统设置</li>
             <li @click="nz"><i class="icon iconfont icon-999999"></i>我的农庄</li>
+            <li @click="shezhi"><i class="icon iconfont icon-shezhi" style="font-size: 17px"></i> 系统设置</li>
+            <li @click="toKefu"><i class="icon iconfont icon-kefu" style="font-size: 16px"></i> 客服服务</li>
             <li @click="tuichu"><i class="icon iconfont icon-tuichu"></i>退出登录</li>
           </ul>
         </div>

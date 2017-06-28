@@ -33,9 +33,10 @@
             //代表进度条的环
             context.beginPath();
             var anglePerSec = 2 * Math.PI / (100 / this.message); // 蓝色的弧度
-            context.arc(40,40,35,0,2*Math.PI-anglePerSec);
+            context.arc(40.5,40.5,35.5,0,2*Math.PI-anglePerSec);
             context.strokeStyle =this.linecolor;
             context.lineCap = "square";
+            context.strokeStyle="#00af0b";
             context.stroke();
             context.closePath();
 
@@ -47,7 +48,7 @@
             context.textBaseline = 'middle';
             context.moveTo(90/2, 90/2);  // 文字填充位置
             context.fillText(this.value+"%", 85/2, 100/2-20);
-            context.fillText("--------------", 80/2, 120/2-20);
+            context.fillText("---------", 80/2, 120/2-20);
             context.fillText(this.zt, 85/2, 70/2+20);
         },
         props: ['message','linecolor','value','zt','index'],

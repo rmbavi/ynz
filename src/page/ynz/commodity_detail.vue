@@ -62,6 +62,7 @@ import {imgBaseUrl,default_news_detail} from '../../config/env.js'
 import {Toast} from 'mint-ui'
 import {fanyi} from '../../service/unit.js'
 import  load from '../../components/load.vue'
+import {monitorReturn} from '../../service/monitor'
 
   export default{
         data: function () {
@@ -77,10 +78,12 @@ import  load from '../../components/load.vue'
               head_img:"",
               default_news_detail:default_news_detail,
               unit:"",
-              loadingon:true
+              loadingon:true,
+              csTime:"",
             }
         },
         mounted(){
+          monitorReturn(false,"ynz")
           let that=this
           that.ids=that.$route.params.ids
           console.log("ids",that.ids)
@@ -96,6 +99,7 @@ import  load from '../../components/load.vue'
                   that.total=parseFloat(that.price*that.buy_number).toFixed(2)
                   that.names=that.detail.names
                   that.fanyiUnit(that.detail.unit)
+                  that.csTime=that.matureTime(that.detail.create_time)
                   that.loadingon=false
                 }else{
                   Toast("系统繁忙,请稍后再试!")
@@ -139,7 +143,7 @@ import  load from '../../components/load.vue'
               //   }
               // })
               that.$router.replace({name:"orderDetail",params:{buy_number:that.buy_number,total:that.total,names:that.names,head_img:that.head_img,
-                commodityIds:that.ids,unit:that.unit}})
+                commodityIds:that.ids,unit:that.unit,csTime:that.csTime}})
             }else{
               Toast("购买数量小于1")
             }  
@@ -156,7 +160,14 @@ import  load from '../../components/load.vue'
           },
           fanyiUnit(unitss){
              this.unit=fanyi(unitss)
-          }
+          },
+          matureTime(time){
+                let data1=new Date().getTime();
+                let timestamp2 = Date.parse(new Date(time));
+                let date3=data1-timestamp2
+                let days=Math.floor(date3/(24*3600*1000))
+                return 100-days
+            }
         }
     }
 </script>
